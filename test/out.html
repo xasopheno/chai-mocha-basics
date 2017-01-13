@@ -1,0 +1,20 @@
+    <section class="suite">
+      <h1>Sanitize</h1>
+      <dl>
+before
+running
+        <dt>returns lowercase of a string</dt>
+        <dd><pre><code>var inputWord = 'hello world';
+var outputWord = word.sanitize(inputWord)
+expect(outputWord).to.not.equal('HELLO WORLD');
+expect(outputWord).to.be.a('string');
+expect(outputWord).to.not.be.a('number');
+expect(outputWord).to.contain('hello');</code></pre></dd>
+before
+running
+        <dt>removes any hyphen</dt>
+        <dd><pre><code>var inputWord = 'HELLO-WORLD';
+var outputWord = word.sanitize(inputWord);
+expect(outputWord).to.equal('hello world');</code></pre></dd>
+      </dl>
+    </section>
