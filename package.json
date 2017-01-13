@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha && istanbul cover _mocha -- -R spec"
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,14 @@
   "homepage": "https://github.com/xasopheno/chai-mocha-basics#readme",
   "dependencies": {},
   "devDependencies": {
+    "blanket": "^1.2.3",
     "chai": "^3.5.0",
     "mocha": "^3.2.0"
+  },
+  "config": {
+    "blanket": {
+      "pattern": [ "index.js" ],
+      "data-cover-never" : "node_modules"
+    }
   }
 }

@@ -26,3 +26,12 @@ describe('Sanitize', function() {
   })
 
 });
+
+describe('Tokenize', function() {
+  it('returns an array of words', function() {
+    var sentence = 'hello world';
+    var tokenizedSentence = word.tokenize(sentence);
+    
+    expect(tokenizedSentence).to.include.members([ 'hello', 'world' ]);
+  })
+})
